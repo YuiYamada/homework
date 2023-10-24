@@ -10,30 +10,30 @@ public class HomeWork1023 {
     // 変数を作成すると、スタック領域に値を保持する。型ごとにサイズも決まっている。
     // ヒープ領域に値を保持しないので、インスタンス化をしない？
     // プリミティブ型の比較には"=="を使用する
-    // int a = 1;
-    // int b = 1;
-    // System.out.println(a == b);
+    int a = 1;
+    int b = 1;
+    System.out.println(a == b);
 
 
-    // // 参照型：
-    // // インスタンス化すると、ヒープ領域に値を確保し、そのアドレスをスタック領域に確保する
-    // // 変数には値そのものではなく、アドレスを保持する
-    // // 参照型の中に、ラッパークラスがある　int ⇒ Integer みたいな
-    // // ラッパークラスはいろんなメソッドを持っていて、メンバ変数にプリミティブ型の値を保持する
-    // Integer i = Integer.valueOf(1);
+    // 参照型：
+    // インスタンス化すると、ヒープ領域に値を確保し、そのアドレスをスタック領域に確保する
+    // 変数には値そのものではなく、アドレスを保持する
+    // 参照型の中に、ラッパークラスがある　int ⇒ Integer みたいな
+    // ラッパークラスはいろんなメソッドを持っていて、メンバ変数にプリミティブ型の値を保持する
+    Integer i = Integer.valueOf(1);
     
-    // // Integer c = new Integer(1); みたいな書き方がJava9から非推奨になっている
-    // Integer q = new Integer(1);
+    // Integer c = new Integer(1); みたいな書き方がJava9から非推奨になっている
+    Integer q = new Integer(1);
     
-    // // ↓のどちらかの書き方になる
-    // Integer c = 1; // オートボクシング(プリミティブ型⇒ラッパークラスへの自動変換)
-    // Integer w = Integer.valueOf(1); // メソッド内でインスタンス化
+    // ↓のどちらかの書き方になる
+    Integer c = 1; // オートボクシング(プリミティブ型⇒ラッパークラスへの自動変換)
+    Integer w = Integer.valueOf(1); // メソッド内でインスタンス化
 
 
-    // // Objectクラス
-    // // extends句を省略した時に暗黙的に継承されるクラス
-    // // 全クラスが最終的にObjectクラスをルートにもつ
-    // Object o;
+    // Objectクラス
+    // extends句を省略した時に暗黙的に継承されるクラス
+    // 全クラスが最終的にObjectクラスをルートにもつ
+    Object o;
     /* 
       * メモ：Object型のtoStringメソッド、読み解くと面白そう　
       * @123456みたいなデバッグ時によく見る形　
@@ -64,6 +64,12 @@ public class HomeWork1023 {
       C. Integer i = Integer.parseInt(obj);
       ⇒ Integer.parseIntの引数はString型で、Object型を継承しているため適切
     */
+
+        
+    Object obj = 75;
+    Integer u = (Integer) obj;
+    Integer y = new Integer(obj);
+    Integer p = Integer.parseInt(obj);
 
   }
 }

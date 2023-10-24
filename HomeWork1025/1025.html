@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      $('#author').text('アジル　太郎');
+    });
+
+    window.onload = (event) => {
+      const author = document.querySelector('#author');
+      author.innerHTML = 'アジル　太郎';
+    };
+  </script>
+</head>
+<body>
+  <div id="note">
+    <h1>夏休みの絵日木</h1>
+    <span id="author">アギル　太郎</span>
+    <div class="page">
+      <h2>8月1日</h2>
+      <p>今日は、お昼ご飯が素麺だった。夏休みが始まって以来、15回目の素う麺である。</p>
+    </div>
+    <div class="page">
+      <h2>8月2日</h2>
+      <p>今日は、お昼ご飯が素麺だった。夏休みが始まって以来、16回目の素う麺である。</p>
+      <p>妹が色付きの麺だけを集めて自分のお椀に入ていた。</p>
+    </div>
+  </div>  
+</body>
+</html>
